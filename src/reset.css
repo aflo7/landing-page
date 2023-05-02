@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Noi';
+  src: url('./assets/noi/NoiGroteskTrial-Regular');
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Noi', sans-serif;
+}
+
