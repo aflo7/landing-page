@@ -12,65 +12,80 @@ export default {
 
 <template>
     <div class="wrapper">
-        <nav class="top-nav">
-            <div class="top-left-nav">
-                <div class="top-left-nav-btn selected-btn">Students</div>
-                <div class="top-left-nav-btn">Employers</div>
-                <div class="top-left-nav-btn">Career Centers</div>
-            </div>
-
-            <div>
-                <div class="top-right-nav-btn">Log in</div>
-            </div>
-        </nav>
-
-        <nav class="second-nav">
-            <div style="padding-top: 5px">
-                <img src="./assets/images/logos/handshake.svg" />
-            </div>
-
-            <div class="second-nav-btns">
-                <div class="second-nav-btn selected-btn-2">Overview</div>
-                <div class="second-nav-btn">How it works</div>
-                <div class="second-nav-btn">Who's hiring</div>
-                <div class="second-nav-btn">Career tips</div>
-
-                <button class="sign-up-btn" style="font-size: 12pt; margin-left: 10px;">Sign up</button>
-            </div>
-        </nav>
-
-        <section class="whos-hiring-section">
-            <strong>We're hiring for our team! </strong>Explore open roles on
-            Handshake.
-        </section>
-
-        <section class="sign-up-wrapper">
-            <div class="sign-up-info-wrapper">
-                <div class="number-one-title">
-                    The #1 way college students get hired
+        <div class="top-nav-wrapper">
+            <nav class="top-nav">
+                <div class="top-left-nav">
+                    <div class="top-left-nav-btn selected-btn">Students</div>
+                    <div class="top-left-nav-btn">Employers</div>
+                    <div class="top-left-nav-btn">Career Centers</div>
                 </div>
 
-                <div style="font-size: 18pt; margin-top: 10px">
-                    Meet people who help you land the job
+                <div>
+                    <div class="top-right-nav-btn">Log in</div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="second-nav-wrapper">
+            <nav class="second-nav">
+                <div style="padding: 5px">
+                    <img src="./assets/images/logos/handshake.svg" />
                 </div>
 
-                <div style="margin-top: 10px">
-                    <input
-                        type="text"
-                        placeholder="Type .edu email here"
-                        class="edu-input"
-                    />
-                    <button class="sign-up-btn">Sign up</button>
-                </div>
-            </div>
+                <div class="second-nav-btns">
+                    <div class="second-nav-btn selected-btn-2">Overview</div>
+                    <div class="second-nav-btn">How it works</div>
+                    <div class="second-nav-btn">Who's hiring</div>
+                    <div class="second-nav-btn">Career tips</div>
 
+                    <button
+                        class="sign-up-btn"
+                        style="font-size: 12pt; margin-left: 10px"
+                    >
+                        Sign up
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <div class="whos-hiring-section-wrapper">
+            <section class="whos-hiring-section">
+                <strong>We're hiring for our team! </strong>Explore open roles
+                on Handshake.
+            </section>
+        </div>
+
+        <div class="sign-up-responsive-wrapper">
+            <section class="sign-up-wrapper">
+                <div class="sign-up-info-wrapper">
+                    <div class="number-one-title">
+                        The #1 way college students get hired
+                    </div>
+
+                    <div style="font-size: 18pt; margin-top: 20px">
+                        Meet people who help you land the job
+                    </div>
+
+                    <div style="margin-top: 20px">
+                        <input
+                            type="text"
+                            placeholder="Type .edu email here"
+                            class="edu-input"
+                        />
+                        <button class="sign-up-btn" >
+                            Sign up
+                        </button>
+                    </div>
+                </div>
+
+                <img src="./assets/images/hero.png" class="hero-img" />
+            </section>
             <img
                 src="./assets/images/hero--desktop.png"
                 alt="hero-desktop"
                 class="desktop-hero-img"
             />
-            <img src="./assets/images/hero.png" class="hero-img" />
-        </section>
+        </div>
 
         <section class="launch-wrapper">
             <div class="launch-heading">
@@ -224,9 +239,9 @@ export default {
 
 .whos-hiring-section {
     text-align: center;
-    background-color: rgb(243, 245, 254);
     padding: 20px;
     font-size: 12pt;
+    background-color: rgb(243, 245, 254);
 }
 
 .edu-input {
@@ -246,9 +261,7 @@ export default {
 }
 
 .second-nav-btn:hover {
-
     border-bottom: 5px solid rgb(144, 78, 238);
-
 }
 
 .second-nav-btns {
@@ -275,7 +288,8 @@ export default {
 }
 
 .desktop-hero-img {
-    height: 600px;
+    height: 580px;
+    float: right;
 }
 
 .number-one-title {
@@ -381,11 +395,6 @@ export default {
 
 /* applies on large screens. */
 @media screen and (min-width: 1240px) {
-    .wrapper {
-        width: 1240px;
-        margin: 0 auto;
-    }
-
     .launch-card-wrapper {
         flex-direction: row;
         width: 800px;
@@ -393,16 +402,31 @@ export default {
     }
 
     .sign-up-wrapper {
-        flex-direction: row;
-        justify-content: space-between;
+        position: absolute;
+        width: 1240px;
+        top: 50%;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+
     }
 
+    .sign-up-info-wrapper {
+        height: 100%;
+        width: 500px;
+    }
+
+    .number-one-title {
+        font-size: 70pt;
+    }
     .hero-img {
         display: none;
     }
 
     .desktop-hero-img {
         display: block;
+        z-index: 2;
     }
 
     .extra-carousel {
@@ -411,6 +435,11 @@ export default {
 
     .second-nav {
         justify-content: space-between;
+        width: 1240px;
+    }
+
+    .whos-hiring-section {
+        width: 1240px;
     }
 
     .second-nav-btns {
@@ -423,6 +452,35 @@ export default {
 
     .hiring-section-mobile {
         display: none;
+    }
+
+    .top-nav {
+        width: 1240px;
+    }
+
+    .top-nav-wrapper {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+    }
+
+    .second-nav-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .whos-hiring-section-wrapper {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(243, 245, 254);
+    }
+
+    .sign-up-responsive-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    background-color: rgb(206, 249, 91);
+
     }
 }
 </style>
