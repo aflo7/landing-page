@@ -472,7 +472,7 @@ export default {
 }
 
 .recruiter-heading {
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 20px;
     text-align: center;
     font-size: 22pt;
