@@ -72,9 +72,7 @@ export default {
                             placeholder="Type .edu email here"
                             class="edu-input"
                         />
-                        <button class="sign-up-btn" >
-                            Sign up
-                        </button>
+                        <button class="sign-up-btn">Sign up</button>
                     </div>
                 </div>
 
@@ -162,6 +160,78 @@ export default {
             <Carousel3 />
             <Carousel1 class="extra-carousel" />
         </section>
+
+        <div class="recruiter-wrapper">
+            <div class="recruiter-content">
+                <img
+                    src="./assets/images/hired-on-handshake.png"
+                    class="hired-on-handshake-img"
+                />
+                <h1 class="recruiter-heading">Recruiters find you</h1>
+
+                <div class="student-info-wrapper">
+                    <div class="student-info">
+                        <p>
+                            "A recruiter at eBay reached out to me directly and
+                            encouraged me to apply. Applying was easy and I knew
+                            exactly what they were looking for."
+                        </p>
+
+                        <p>Amisha, UC Berkeley</p>
+                    </div>
+
+                    <div class="student-img-container">
+                        <img src="./assets/images/amisha.jpg" />
+                    </div>
+                </div>
+
+                <div class="student-info-wrapper student-info-wrapper-reverse">
+                    <div class="student-info">
+                        <p>
+                            "Within one week of creating my profile—one week!—I
+                            was invited to interview for Dell Technologies. And
+                            I got a job!"
+                        </p>
+
+                        <p>James, Boston University</p>
+                    </div>
+
+                    <div class="student-img-container">
+                        <img src="./assets/images/james.jpg" />
+                    </div>
+                </div>
+
+                <div class="student-info-wrapper">
+                    <div class="student-info">
+                        <p>
+                            "One day I got an email in my inbox saying you have
+                            a message from Microsoft. It was an invitation to
+                            interview!"
+                        </p>
+
+                        <p>Ami, UC Irvine</p>
+                    </div>
+
+                    <div class="student-img-container">
+                        <img src="./assets/images/ami.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="first-to-know-wrapper">
+            <div class="first-to-know-content">
+                <div class="first-to-know-info">
+                    <h1>Be the first to know</h1>
+                    <p>
+                        The freshest full-time jobs, internships, and
+                        connections
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div></div>
     </div>
 </template>
 
@@ -192,7 +262,7 @@ export default {
 .top-left-nav-btn {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-bottom: 15px;
     cursor: pointer;
     font-size: 10pt;
@@ -217,7 +287,7 @@ export default {
 .top-right-nav-btn {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-bottom: 15px;
     font-size: 10pt;
 }
@@ -298,6 +368,7 @@ export default {
 }
 
 .launch-card {
+    padding-bottom: 20px;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -393,6 +464,75 @@ export default {
     display: none;
 }
 
+.recruiter-content {
+    background-color: rgb(10, 32, 34);
+    color: white;
+    margin-top: 80px;
+    position: relative;
+}
+
+.recruiter-heading {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 22pt;
+}
+
+.hired-on-handshake-img {
+    width: 150px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.student-info-wrapper {
+    padding: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.student-img-container {
+    overflow: hidden;
+    transform: skew(-3deg);
+    display: inline-block;
+    background-color: white;
+}
+.student-img-container img {
+    transform: skew(3deg);
+    display: block;
+    width: 200px;
+}
+
+.first-to-know-content {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.first-to-know-info {
+    background-color: white;
+    text-align: center;
+    padding: 40px;
+    width: 220px;
+    height: fit-content;
+    margin-top: 80px;
+    box-shadow: 10px 10px 25px rgba(0,0,0,.18);
+}
+
+.first-to-know-info h1 {
+    font-size: 20pt;
+}
+
+.first-to-know-info p {
+    font-size: 16pt;
+}
+
+.first-to-know-wrapper {
+    background-image: url(./assets/images/front-page-first-to-know-mobile.png);
+    background-size: cover;
+    background-position: center;
+}
+
 /* applies on large screens. */
 @media screen and (min-width: 1240px) {
     .launch-card-wrapper {
@@ -409,7 +549,6 @@ export default {
         left: 50%;
         transform: translate(-50%, -50%);
         height: 100%;
-
     }
 
     .sign-up-info-wrapper {
@@ -479,8 +618,76 @@ export default {
         display: flex;
         justify-content: flex-end;
         position: relative;
-    background-color: rgb(206, 249, 91);
+        background-color: rgb(206, 249, 91);
+    }
 
+    .first-to-know-wrapper {
+        background-image: url(./assets/images/front-page-first-to-know.png);
+        background-position: center;
+        width: 100%;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+    }
+
+    .first-to-know-content {
+        display: flex;
+        justify-content: flex-end;
+        width: 1240px;
+    }
+
+    .first-to-know-info {
+        margin-right: 60px;
+    }
+
+    .recruiter-wrapper {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(10, 32, 34);
+        margin-top: 120px;
+    }
+
+    .recruiter-content {
+        width: 1240px;
+        margin-top: 0px;
+    }
+
+    .first-to-know-info {
+        background-color: white;
+        text-align: center;
+        padding: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 400px;
+        height: fit-content;
+    }
+
+    .first-to-know-info h1 {
+        font-size: 26pt;
+    }
+
+    .first-to-know-info p {
+        font-size: 18pt;
+    }
+
+    .student-info-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .student-info {
+        width: 800px;
+    }
+
+    .student-info p:first-child {
+        font-size: 20pt;
+    }
+
+    .student-info-wrapper-reverse {
+        flex-direction: row-reverse;
+    }
+    .hired-on-handshake-img {
+        width: 200px;
     }
 }
 </style>
