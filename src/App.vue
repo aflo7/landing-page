@@ -2,6 +2,7 @@
 import Carousel1 from "./components/Carousel1.vue"
 import Carousel2 from "./components/Carousel2.vue"
 import Carousel3 from "./components/Carousel3.vue"
+import App2 from "./components/App2.vue"
 </script>
 
 <script>
@@ -28,7 +29,7 @@ export default {
 
         <div class="second-nav-wrapper">
             <nav class="second-nav">
-                <div style="padding: 5px">
+                <div style="padding-top: 5px; padding-left: 10px;">
                     <img src="./assets/images/logos/handshake.svg" />
                 </div>
 
@@ -85,55 +86,53 @@ export default {
             />
         </div>
 
-        <section class="launch-wrapper">
-            <div class="launch-heading">
-                Launch your career <br />on Handshake
+        <div class="launch-heading">Launch your career <br />on Handshake</div>
+
+        <div class="launch-card-wrapper">
+            <div class="launch-card">
+                <img src="./assets/images/front-page-right-jobs-icon.png" />
+                <div class="launch-text">The right jobs for you</div>
             </div>
 
-            <div class="launch-card-wrapper">
-                <div class="launch-card">
-                    <img src="./assets/images/front-page-right-jobs-icon.png" />
-                    <div class="launch-text">The right jobs for you</div>
-                </div>
+            <div class="launch-card">
+                <img src="./assets/images/front-page-one-on-one-icon.png" />
+                <div class="launch-text">One-on-one convos with employers</div>
+            </div>
 
-                <div class="launch-card">
-                    <img src="./assets/images/front-page-one-on-one-icon.png" />
-                    <div class="launch-text">
-                        One-on-one convos with employers
+            <div class="launch-card">
+                <img src="./assets/images/front-page-work-exp-icon.png" />
+
+                <div class="launch-text">No work experience required</div>
+            </div>
+        </div>
+
+        <div class="how-it-works-btn-wrapper">
+            <button class="how-it-works-btn">How it works</button>
+        </div>
+
+        <div class="hiring-section-wrapper">
+            <section class="hiring-section">
+                <div class="hiring-content">
+                    <div class="hiring-heading">
+                        Meet top employers hiring now
                     </div>
+                    <button class="whos-hiring-btn">Who's hiring</button>
                 </div>
 
-                <div class="launch-card">
-                    <img src="./assets/images/front-page-work-exp-icon.png" />
-
-                    <div class="launch-text">No work experience required</div>
+                <div class="hiring-img-wrapper">
+                    <img
+                        style="position: relative; top: 0; left: 0"
+                        src="./assets/images/purple-squiggle.png"
+                        height="400px"
+                    />
+                    <img
+                        style="position: absolute; top: 40px; left: 80px"
+                        src="./assets/images/front-page-meet-top-employers.png"
+                        height="300px"
+                    />
                 </div>
-            </div>
-
-            <div class="how-it-works-btn-wrapper">
-                <button class="how-it-works-btn">How it works</button>
-            </div>
-        </section>
-
-        <section class="hiring-section">
-            <div class="hiring-content">
-                <div class="hiring-heading">Meet top employers hiring now</div>
-                <button class="whos-hiring-btn">Who's hiring</button>
-            </div>
-
-            <div class="hiring-img-wrapper">
-                <img
-                    style="position: relative; top: 0; left: 0"
-                    src="./assets/images/purple-squiggle.png"
-                    height="400px"
-                />
-                <img
-                    style="position: absolute; top: 40px; left: 80px"
-                    src="./assets/images/front-page-meet-top-employers.png"
-                    height="300px"
-                />
-            </div>
-        </section>
+            </section>
+        </div>
 
         <section class="hiring-section-mobile">
             <div class="hiring-heading">Meet top employers hiring now</div>
@@ -231,15 +230,11 @@ export default {
             </div>
         </div>
 
-        <div></div>
+        <App2 />
     </div>
 </template>
 
 <style scoped>
-@font-face {
-    font-family: "sansplomb";
-    src: url(../src/assets/plomb/SansPlomb_TRIAL-95.otf);
-}
 
 .top-left-nav {
     display: flex;
@@ -276,9 +271,7 @@ export default {
     border-bottom: 5px solid white;
 }
 
-.number-one-title {
-    font-family: "sansplomb";
-}
+
 
 .selected-btn-2 {
     border-bottom: 5px solid rgb(144, 78, 238);
@@ -365,6 +358,8 @@ export default {
 .number-one-title {
     font-size: 42pt;
     font-weight: bold;
+    font-family: "sansplomb";
+
 }
 
 .launch-card {
@@ -419,13 +414,14 @@ export default {
 .carousel-wrapper {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .launch-card-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
 }
 
 .hiring-section-mobile {
@@ -440,7 +436,7 @@ export default {
     display: none;
     flex-direction: row;
     justify-content: center;
-    padding: 50px;
+    padding: 60px;
 }
 
 .hiring-content {
@@ -516,7 +512,7 @@ export default {
     width: 220px;
     height: fit-content;
     margin-top: 80px;
-    box-shadow: 10px 10px 25px rgba(0,0,0,.18);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.18);
 }
 
 .first-to-know-info h1 {
@@ -537,8 +533,9 @@ export default {
 @media screen and (min-width: 1240px) {
     .launch-card-wrapper {
         flex-direction: row;
-        width: 800px;
+        width: 1000px;
         justify-content: space-between;
+        margin: 0 auto;
     }
 
     .sign-up-wrapper {
@@ -587,6 +584,12 @@ export default {
 
     .hiring-section {
         display: flex;
+        width: 1000px;
+    }
+
+    .hiring-section-wrapper {
+        display: flex;
+        justify-content: center;
     }
 
     .hiring-section-mobile {

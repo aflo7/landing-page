@@ -1,3 +1,8 @@
 * {
   font-size: 14pt;
 }
+
+@font-face {
+  font-family: "sansplomb";
+  src: url(../src/assets/plomb/SansPlomb_TRIAL-95.otf);
+}
