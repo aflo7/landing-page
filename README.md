@@ -1,5 +1,5 @@
-Recreation of the Handshake homepage
+- I recreated the Handshake landing page.
+- The page is responsive for desktop and mobile devices.
+- You can find the deployed site here: [Live Website](https://aflo7.github.io/landing-page/)
+- Technologies used: Vue.js, JavaScript, HTML, and CSS, Vite
 
-Technologies used: Vue.js, JavaScript, HTML, and CSS
-
-[Live Website](https://aflo7.github.io/landing-page/)

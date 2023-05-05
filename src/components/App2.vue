@@ -133,10 +133,6 @@
 }
 
 @media screen and (min-width: 1240px) {
-
-  .find-heading {
-
-  }
     .pick-up-wrapper {
         display: flex;
         flex-direction: row;
@@ -147,8 +143,7 @@
 
     .pick-up-your-phone {
         padding: 0px;
-    font-size: 70pt;
-
+        font-size: 70pt;
     }
 
     .pick-up-content {
