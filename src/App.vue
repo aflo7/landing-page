@@ -3,6 +3,8 @@ import Carousel1 from "./components/Carousel1.vue"
 import Carousel2 from "./components/Carousel2.vue"
 import Carousel3 from "./components/Carousel3.vue"
 import App2 from "./components/App2.vue"
+import App3 from "./components/App3.vue"
+
 </script>
 
 <script>
@@ -134,7 +136,7 @@ export default {
             </section>
         </div>
 
-        <section class="hiring-section-mobile">
+        <!-- <section class="hiring-section-mobile">
             <div class="hiring-heading">Meet top employers hiring now</div>
 
             <div class="hiring-img-wrapper">
@@ -151,7 +153,7 @@ export default {
             </div>
 
             <button class="whos-hiring-btn">Who's hiring</button>
-        </section>
+        </section> -->
 
         <section class="carousel-wrapper">
             <Carousel1 />
@@ -231,6 +233,8 @@ export default {
         </div>
 
         <App2 />
+
+        <App3/>
     </div>
 </template>
 
@@ -468,8 +472,7 @@ export default {
 }
 
 .recruiter-heading {
-    padding-top: 120px;
-    padding-bottom: 20px;
+    padding-top: 100px;
     text-align: center;
     font-size: 22pt;
 }

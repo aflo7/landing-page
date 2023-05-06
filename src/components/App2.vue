@@ -112,7 +112,7 @@
 }
 
 .find-heading {
-    font-size: 20pt;
+    font-size: 22pt;
     padding-bottom: 10px;
     font-weight: bold;
 }
@@ -165,6 +165,14 @@
 
     .iphone-img-wrapper-desktop img {
         height: 440px;
+    }
+
+    .find-heading {
+        font-size: 30pt;
+    }
+
+    .edu-input {
+        font-size: 14pt;
     }
 }
 </style>
