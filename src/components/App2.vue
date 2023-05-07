@@ -44,7 +44,7 @@
             Find the right jobs for you. <br />Get hired.
         </div>
 
-        <div style="margin-top: 20px; width: 460px; display: flex">
+        <div class="find-wrappper-input-wrapper">
             <input
                 type="text"
                 placeholder="Type .edu email here"
@@ -94,13 +94,20 @@
     align-items: center;
 }
 
+.find-wrappper-input-wrapper {
+    margin-top: 20px;
+    width: 370px;
+    display: flex;
+}
+
 .sign-up-btn {
     border-radius: 5px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 14pt;
+    font-size: 12pt;
     background-color: rgb(206, 249, 91);
+    border: none;
     color: black;
 }
 
@@ -109,6 +116,7 @@
     border-radius: 5px;
     border: none;
     margin-right: 15px;
+    font-size: 12pt;
 }
 
 .find-heading {
@@ -173,6 +181,10 @@
 
     .edu-input {
         font-size: 14pt;
+    }
+
+    .find-wrappper-input-wrapper {
+        width: 510px;
     }
 }
 </style>

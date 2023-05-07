@@ -4,7 +4,6 @@ import Carousel2 from "./components/Carousel2.vue"
 import Carousel3 from "./components/Carousel3.vue"
 import App2 from "./components/App2.vue"
 import App3 from "./components/App3.vue"
-
 </script>
 
 <script>
@@ -31,7 +30,7 @@ export default {
 
         <div class="second-nav-wrapper">
             <nav class="second-nav">
-                <div style="padding-top: 5px; padding-left: 10px;">
+                <div style="padding-top: 5px; padding-left: 10px">
                     <img src="./assets/images/logos/handshake.svg" />
                 </div>
 
@@ -75,7 +74,7 @@ export default {
                             placeholder="Type .edu email here"
                             class="edu-input"
                         />
-                        <button class="sign-up-btn">Sign up</button>
+                        <button class="sign-up-btn-2">Sign up</button>
                     </div>
                 </div>
 
@@ -134,26 +133,34 @@ export default {
                     />
                 </div>
             </section>
+
+            <section class="hiring-section-mobile">
+                <div class="hiring-heading">Meet top employers hiring now</div>
+
+                <div
+                    class="hiring-img-wrapper"
+                    style="padding-bottom: 15px; padding-top: 15px"
+                >
+                    <img
+                        style=""
+                        src="./assets/images/purple-squiggle.png"
+                        width="80%"
+                    />
+                    <img
+                        src="./assets/images/front-page-meet-top-employers.png"
+                        style="
+                            position: absolute;
+                            width: 60%;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        "
+                    />
+                </div>
+
+                <button class="whos-hiring-btn">Who's hiring</button>
+            </section>
         </div>
-
-        <!-- <section class="hiring-section-mobile">
-            <div class="hiring-heading">Meet top employers hiring now</div>
-
-            <div class="hiring-img-wrapper">
-                <img
-                    style="position: relative; top: 0; left: 0"
-                    src="./assets/images/purple-squiggle.png"
-                    height="400px"
-                />
-                <img
-                    style="position: absolute; top: 40px; left: 80px"
-                    src="./assets/images/front-page-meet-top-employers.png"
-                    height="300px"
-                />
-            </div>
-
-            <button class="whos-hiring-btn">Who's hiring</button>
-        </section> -->
 
         <section class="carousel-wrapper">
             <Carousel1 />
@@ -234,12 +241,11 @@ export default {
 
         <App2 />
 
-        <App3/>
+        <App3 />
     </div>
 </template>
 
 <style scoped>
-
 .top-left-nav {
     display: flex;
     flex-direction: row;
@@ -275,8 +281,6 @@ export default {
     border-bottom: 5px solid white;
 }
 
-
-
 .selected-btn-2 {
     border-bottom: 5px solid rgb(144, 78, 238);
 }
@@ -304,6 +308,16 @@ export default {
     font-size: 14pt;
 }
 
+.sign-up-btn-2 {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
 .whos-hiring-section {
     text-align: center;
     padding: 20px;
@@ -316,6 +330,7 @@ export default {
     border-radius: 5px;
     border: none;
     margin-right: 15px;
+    font-size: 12pt;
 }
 
 .second-nav-btn {
@@ -363,7 +378,6 @@ export default {
     font-size: 42pt;
     font-weight: bold;
     font-family: "sansplomb";
-
 }
 
 .launch-card {
@@ -396,6 +410,7 @@ export default {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    font-size: 14pt;
 }
 
 .how-it-works-btn-wrapper {
@@ -413,6 +428,7 @@ export default {
     cursor: pointer;
     width: fit-content;
     margin: 20px;
+    font-size: 14pt;
 }
 
 .carousel-wrapper {
@@ -453,7 +469,6 @@ export default {
     position: relative;
     top: 0;
     left: 0;
-    width: fit-content;
 }
 
 .desktop-hero-img {
